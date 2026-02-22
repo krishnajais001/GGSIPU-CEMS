@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEMS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/event-accepted.png" type="image/x-icon">
+</head>
+<body>
+
+<!-- Nav Bar -->
+<header>
+
+    <!-- Logo -->
+   <img src="./IMAGES/logo.png" alt="logo" class="logo">
+
+   <!-- Menu Items -->
+   <nav id="nav-bar">
+        <ul id="nav-bar-lists">
+            <!-- Mobile Search -->
+            <li class="mobile-search">
+                <div class="serch-btn">
+                    <input type="text" placeholder="Search Events..." class="srch-box">
+                    <button class="srch-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </li>
+            <li class="nav-items"><a href="#main-page">Home</a></li>
+            <li class="nav-items dropdown">
+                <a href="#events">Events <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Cultural</a></li>
+                    <li><a href="#">Technical</a></li>
+                    <li><a href="#">Workshops</a></li>
+                    <li><a href="#">Sports</a></li>
+                    <li><a href="#">Seminars</a></li>
+                </ul>
+            </li>
+            <li class="nav-items"><a href="#about">About</a></li>
+            <li class="nav-items"><a href="#contact-us">Contact Us</a></li>
+        </ul>
+   </nav>
+
+   <!-- Search Button -->
+   <div class="serch-btn">
+        <input type="text" placeholder="Search Events..." class="srch-box">
+        <button class="srch-btn"><i class="fas fa-search"></i></button>
+   </div>
+
+
+ <!-- Hamburger / Menu Buttons -->
+<div class="menu-icons">
+    <i class="fas fa-bars" id="open-menu"></i>
+    <i class="fas fa-times" id="close-menu"></i>
+</div>
+
+   <!-- Profile Button -->
+    <div class="profile-btn">
+        <a href="auth.html?mode=login"><button class="btn" >Login</button></a>
+        <a href="auth.html?mode=signup"><button class="btn" >Sign Up</button></a>
+   </div>
+
+
+</header>
+
+<!-- Hero Section -->
+<section class="hero-section" id="main-page">
+    <div class="hero-content">
+        <h1>Welcome to GGSIPU Event Management System</h1>
+        <p>Our mission is to cultivate a collaborative community, enhance participation, and deliver a streamlined and user-friendly registration process for all initiatives..</p>
+    
+        <button class="register-btn" style="width: auto; padding: 12px 30px; ">Explore Events</button>
+    </div>
+    <div class="hero-image">
+        <img src="./IMAGES/main-bg.jpg" alt="hero">
+    </div>
+</section>
+
+
+<!-- Upcoming Events -->
+<section class="upcoming-Events" id="events">
+
+  <div class="section-title">
+    <h2>🎉 Upcoming Events</h2>
+    <p>Register now and be part of the excitement!</p>
+  </div>
+
+  <div class="events-grid">
+
+    <!-- Event 1 -->
+    <div class="event-card">
+      <span class="badge">Limited Seats</span>
+      <img src="https://tse2.mm.bing.net/th/id/OIP.RZeQGAf7CMbJsT8VoTI4KAHaEo?rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+      <div class="card-content">
+        <h3>Tech Symposium 2026</h3>
+        <div class="details">📅 25 March 2026 | 📍 Auditorium Hall</div>
+        <p>Join the biggest technical event with coding competitions and AI sessions.</p>
+        <button class="register-btn" onclick="registerEvent('Tech Symposium 2026')">
+          Register Now
+        </button>
+      </div>
+    </div>
+
+    <!-- Event 2 -->
+    <div class="event-card">
+      <img src="./IMAGES/culture-img.png" alt="">
+      <div class="card-content">
+        <h3>Cultural Fest</h3>
+        <div class="details">📅 5 April 2026 | 📍 Open Ground</div>
+        <p>Dance, music, drama & exciting performances by students.</p>
+        <button class="register-btn" onclick="registerEvent('Cultural Fest')">
+          Register Now
+        </button>
+      </div>
+    </div>
+
+    <!-- Event 3 -->
+    <div class="event-card">
+      <img src="./IMAGES/ai-workshop-web-banner.jpg" alt="">
+      <div class="card-content">
+        <h3>Startup Workshop</h3>
+        <div class="details">📅 12 April 2026 | 📍 Seminar Hall</div>
+        <p>Learn entrepreneurship, funding strategies & startup growth ideas.</p>
+        <button class="register-btn" onclick="registerEvent('Startup Workshop')">
+          Register Now
+        </button>
+      </div>
+    </div>
+
+    <!-- Event 4 -->
+    <div class="event-card">
+      <span class="badge">New</span>
+      <img src="https://www.happytime.live/wp-content/uploads/2024/06/ai-workshop-web-banner.jpg" alt="">
+      <div class="card-content">
+        <h3>Workshop on AI</h3>
+        <div class="details">📅 20 April 2026 | 📍 Computer Lab</div>
+        <p>Learn about artificial intelligence and its applications in real-world scenarios.</p>
+        <button class="register-btn" onclick="registerEvent('Workshop on AI')">
+          Register Now
+        </button>
+      </div>
+    </div>
+
+    <!-- Event 5 -->
+    <div class="event-card">
+      <img src="./IMAGES/robotic-workshop_.jpg" alt="">
+      <div class="card-content">
+        <h3>Robotics Competition</h3>
+        <div class="details">📅 28 April 2026 | 📍 Robotics Lab</div>
+        <p>Build and compete with your own robot in this exciting competition.</p>
+        <button class="register-btn" onclick="registerEvent('Robotics Competition')">
+          Register Now
+        </button>
+      </div>
+    </div>
+
+    <!-- Event 6 -->
+    <div class="event-card">
+      <span class="badge">New</span>
+      <img src="./IMAGES/desing-wroskshop.webp" alt="">
+      <div class="card-content">
+        <h3>Design Thinking Workshop</h3>
+        <div class="details">📅 5 May 2026 | 📍 Design Studio</div>
+        <p>Learn design thinking principles and apply them to real-world challenges.</p>
+        <button class="register-btn" onclick="registerEvent('Design Thinking Workshop')">
+          Register Now
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Notificaiton Section -->
+<section class="notification-section">
+  <div class="notification-container">
+
+    <h2>🔔 Get Event Notifications</h2>
+    <p>Subscribe to receive updates about upcoming college events.</p>
+
+    <form class="notification-form" onsubmit="showMessage(event)">
+      <input type="text" placeholder="Enter Your Full Name" required>
+      <input type="text" placeholder="Enter Your Roll Number" required>
+      <input type="text" placeholder="Enter Your Branch" required>
+      <input type="text" placeholder="Enter Your Year of Study" required>
+      <input type="text" placeholder="Enter Your College Name" required>
+      <input type="email" placeholder="Enter Your Email Address" required>
+      <input type="text" placeholder="Enter Your Contact Number" required>
+
+
+      <select required>
+        <option value="">Select Event Category</option>
+        <option>Cultural</option>
+        <option>Technical</option>
+        <option>Workshop</option>
+        <option>Sports</option>
+        <option>Seminar</option>
+      </select>
+
+      <button type="submit">Subscribe Now</button>
+    </form>
+
+    <div class="success-message" id="successMessage">
+      🎉 You have successfully subscribed for event notifications!
+    </div>
+
+  </div>
+</section>
+
+<!-- Conducted Events Section -->
+<section class="conducted-section">
+
+  <div class="section-header">
+    <h2>🎓 Successfully Conducted Events</h2>
+    <p>Explore seminars, workshops and fests we have successfully organized.</p>
+  </div>
+
+  <div class="conducted-grid">
+
+    <!-- Card 1 -->
+    <div class="conducted-card">
+      <img src="./IMAGES/completed events/ai-workshsop.jpg" alt="Seminar">
+      <div class="conducted-content">
+        <span class="event-type seminar">Seminar</span>
+        <h3>AI & Future Technology Seminar</h3>
+        <p>📅 12 Jan 2026 | 👥 250+ Participants</p>
+        <button class="view-btn" 
+          data-title="AI & Future Technology Seminar" 
+          data-type="Seminar" 
+          data-date="12 Jan 2026" 
+          data-participants="250+" 
+          data-image="./IMAGES/completed events/ai-workshsop.jpg"
+          data-desc="An insightful seminar exploring the latest trends in Artificial Intelligence, Machine Learning, and how they will shape the future of technology industries."
+          data-speakers="Dr. Arpan Kumar (OpenAI), Sarah Chen (Google Brain)"
+          data-highlights="Generative AI roadmap, Ethical AI frameworks, Industrial automation trends"
+          data-venue="Main Auditorium, Block A">
+          View Details
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="conducted-card">
+      <img src="./IMAGES/completed events/web-bootcmap.webp" alt="Workshop">
+      <div class="conducted-content">
+        <span class="event-type workshop">Workshop</span>
+        <h3>Web Development Bootcamp</h3>
+        <p>📅 15 Feb 2026 | 👥 180+ Participants</p>
+        <button class="view-btn"
+          data-title="Web Development Bootcamp" 
+          data-type="Workshop" 
+          data-date="15 Feb 2026" 
+          data-participants="180+" 
+          data-image="./IMAGES/completed events/web-bootcmap.webp"
+          data-desc="A hands-on intensive bootcamp focused on modern web technologies including React, Node.js, and CSS Grid."
+          data-speakers="Vikram Singh (Fullstack Dev), Priya Mehra (UI Designer)"
+          data-highlights="React Hooks masterclass, Backend with Express, Deploying to Vercel"
+          data-venue="Computer Lab 4, IT Block">
+          View Details
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="conducted-card">
+      <img src="./IMAGES/completed events/culturral-fest.webp" alt="Fest">
+      <div class="conducted-content">
+        <span class="event-type fest">Fest</span>
+        <h3>Annual Cultural Fest 2026</h3>
+        <p>📅 20 Feb 2026 | 👥 500+ Participants</p>
+        <button class="view-btn"
+          data-title="Annual Cultural Fest 2026" 
+          data-type="Fest" 
+          data-date="20 Feb 2026" 
+          data-participants="500+" 
+          data-image="./IMAGES/completed events/culturral-fest.webp"
+          data-desc="The biggest event of the year! A celebration of music, dance, and art featuring talent from across the university."
+          data-speakers="Armaan Malik (Guest Artist), Shreya Ghoshal (Judge)"
+          data-highlights="Battle of Bands, Fashion Show, Celebrity Night Concert"
+          data-venue="University Stadium">
+          View Details
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="conducted-card">
+      <img src="./IMAGES/completed events/sports-events.jpg" alt="Sports">
+      <div class="conducted-content">
+        <span class="event-type sports">Sports</span>
+        <h3>Inter-College Sports Meet 2026</h3>
+        <p>📅 15 Dec 2025 | 👥 300+ Participants</p>
+        <button class="view-btn"
+          data-title="Inter-College Sports Meet 2025" 
+          data-type="Sports" 
+          data-date="15 Dec 2025" 
+          data-participants="300+" 
+          data-image="./IMAGES/completed events/sports-events.jpg"
+          data-desc="A thrilling competition bringing together athletes from various colleges to compete in cricket, football, and athletics. Fostering spirit, teamwork, and healthy competition.">
+          View Details
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="conducted-card">
+      <img src="./IMAGES/robotic-workshop_.jpg" alt="Tech">
+      <div class="conducted-content">
+        <span class="event-type tech">Technical</span>
+        <h3>Robotics & AI Hackathon 2026</h3>
+        <p>📅 20 Jan 2026 | 👥 150+ Participants</p>
+        <button class="view-btn"
+          data-title="Robotics & AI Hackathon 2026" 
+          data-type="Technical" 
+          data-date="20 Jan 2026" 
+          data-participants="150+" 
+          data-image="./IMAGES/robotic-workshop_.jpg"
+          data-desc="Teams competed to solve complex problems using robotics and AI algorithms. The event showcased innovative solutions and exceptional engineering skills from participants.">
+          View Details
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+  <div class="conducted-card">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.RZeQGAf7CMbJsT8VoTI4KAHaEo?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Tech">
+      <div class="conducted-content">
+        <span class="event-type tech">Technical</span>
+        <h3>Tech Symposium 2026</h3>
+        <p>📅 05 Feb 2026 | 👥 200+ Participants</p>
+        <button class="view-btn"
+          data-title="Tech Symposium 2026" 
+          data-type="Technical" 
+          data-date="05 Feb 2026" 
+          data-participants="200+" 
+          data-image="https://tse2.mm.bing.net/th/id/OIP.RZeQGAf7CMbJsT8VoTI4KAHaEo?rs=1&pid=ImgDetMain&o=7&rm=3"
+          data-desc="A day filled with technical workshops, paper presentations, and tech talks from industry pioneers. A platform for students to share knowledge and explore emerging technologies.">
+          View Details
+        </button>
+      </div>
+    </div>
+
+
+    
+  </div>
+
+</section>
+
+<!-- About Section -->
+<section class="about-section" id="about">
+  <div class="about-container">
+    <div class="about-image">
+      <img src="./IMAGES/main-bg.jpg" alt="About CEMS">
+    </div>
+    <div class="about-content">
+      <div class="section-title" style="text-align: left; margin-bottom: 1.5rem;">
+        <h2>About CEMS</h2>
+        <p>Your ultimate destination for college events.</p>
+      </div>
+      <p>The College Event Management System (CEMS) is a centralized platform designed to seamlessly connect students with the exciting events happening across the campus. Whether you're looking to participate in a hackathon, enjoy a cultural festival, or compete in sports, we've got you covered.</p>
+      <p>Our mission is to foster community, encourage participation, and provide a streamlined registration process for all activities.</p>
+      
+      <div class="about-stats">
+        <div class="stat-item">
+          <h3>500+</h3>
+          <p>Events Yearly</p>
+        </div>
+        
+        <div class="stat-item">
+          <h3>10k+</h3>
+          <p>Active Students</p>
+        </div>
+        <div class="stat-item">
+          <h3>25+</h3>
+          <p>Clubs</p>
+        </div>
+      </div>
+      
+      <button class="register-btn" style="width: auto; padding: 12px 30px;">Learn More</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- Event Details Modal -->
+<div class="modal-overlay" id="eventModal">
+    <div class="modal-card">
+        <button class="modal-close" id="closeModal">&times;</button>
+        <div class="modal-body">
+            <div class="modal-image">
+                <img id="modalImg" src="" alt="Event Image">
+            </div>
+            <div class="modal-info">
+                <span class="event-type" id="modalType"></span>
+                <h2 id="modalTitle"></h2>
+                <div class="modal-meta">
+                    <span id="modalDate"></span>
+                    <span id="modalStats"></span>
+                </div>
+                <p id="modalDesc"></p>
+                <div class="modal-extra">
+                    <div class="extra-item">
+                        <i class="fas fa-microphone"></i>
+                        <div>
+                            <strong>Speakers:</strong>
+                            <span id="modalSpeakers"></span>
+                        </div>
+                    </div>
+                    <div class="extra-item">
+                        <i class="fas fa-list-check"></i>
+                        <div>
+                            <strong>Highlights:</strong>
+                            <span id="modalHighlights"></span>
+                        </div>
+                    </div>
+                    <div class="extra-item">
+                        <i class="fas fa-location-dot"></i>
+                        <div>
+                            <strong>Venue:</strong>
+                            <span id="modalVenue"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-action">
+                    <button class="register-btn" onclick="document.getElementById('eventModal').classList.remove('active'); document.body.style.overflow = 'auto';">Close Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Registration Modal -->
+<div class="modal-overlay" id="registrationModal">
+        <div class="modal-card" style="max-width: 600px;">
+            <button class="modal-close" id="closeRegModal">&times;</button>
+            <div class="modal-info" style="padding: 50px;">
+                <h2 id="regEventTitle">Register for Event</h2>
+                <p>Fill in your details to secure your spot.</p>
+                
+                <form id="eventRegistrationForm" class="notification-form" style="text-align: left; gap: 15px; margin-top: 25px;">
+                    <input type="hidden" id="regEventName">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Enter Your Full Name" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-id-card"></i>
+                        <input type="text" placeholder="Enter Your Roll Number" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-code-branch"></i>
+                        <input type="text" placeholder="Enter Your Branch" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-calendar-alt"></i>
+                        <input type="text" placeholder="Enter Your Year of Study" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-university"></i>
+                        <input type="text" placeholder="Enter Your College Name" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Enter Your Email Address" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" placeholder="Enter Your Contact Number" required>
+                    </div>
+                    
+                    <button type="submit" class="register-btn" style="margin-top: 20px;">Confirm Registration</button>
+                </form>
+                <div id="regSuccess" class="success-message" style="margin-top: 20px; color: green; display: none; font-weight: bold; text-align: center;">
+                    🎉 Registration Successful! See you at the event.
+                </div>
+            </div>
+        </div>
+</div>
+
+<!-- Footer Section -->
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- About -->
+    <div class="footer-col">
+        <img src="./IMAGES/logo.png" alt="logo" class="logo" style="max-width: 170px;">
+     <p>The College Event Management System (CEMS) is a centralized platform designed to seamlessly connect students with the exciting events happening across the campus.</p>
+    <p>Our mission is to foster community, encourage participation, and provide a streamlined registration process for all activities.</p>
+      
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#main-page">Home</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Categories -->
+    <div class="footer-col">
+      <h4>Event Categories</h4>
+      <ul>
+        <li><a href="#">Cultural</a></li>
+        <li><a href="#">Technical</a></li>
+        <li><a href="#">Workshops</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Seminars</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col" id="contact-us">
+      <h4>Contact Us</h4>
+      <p>📍 Dwarka, New Delhi - 110078</p>
+      <p>📧 ipuevents@college.edu</p>
+      <p>🌐 www.ipu.ac.in</p>
+      <p>📞 +91-11-25302171</p>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-bottom">
+    © 2026 College Event Management System | All Rights Reserved
+  </div>
+
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>
